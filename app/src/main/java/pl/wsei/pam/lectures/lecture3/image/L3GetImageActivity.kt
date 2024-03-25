@@ -30,6 +30,7 @@ class L3GetImageActivity : AppCompatActivity() {
         }
         mButton = findViewById(R.id.l3GetImageBtn)
         mImageView = findViewById(R.id.l3ImageView)
+
         mGetImage =
             registerForActivityResult<String, Uri>(
                 ActivityResultContracts.GetContent()

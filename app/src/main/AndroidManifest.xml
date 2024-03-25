@@ -37,6 +37,9 @@
         android:theme="@style/Theme.Lectures"
         tools:targetApi="tiramisu">
         <activity
+            android:name=".lecture5.Lecture05Activity"
+            android:exported="false" />
+        <activity
             android:name=".lecture4.lifecycle.L4LifeCycleActivity"
             android:exported="false"
             android:label="@string/title_activity_l4_life_cycle"

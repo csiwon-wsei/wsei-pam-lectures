@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import pl.wsei.pam.lectures.lecture3.Lecture03Activity
 import pl.wsei.pam.lectures.lecture4.Lecture04Activity
+import pl.wsei.pam.lectures.lecture5.Lecture05Activity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,10 @@ class MainActivity : AppCompatActivity() {
 
     fun runLecture04Activity(v: View){
         startActivity(Intent(this, Lecture04Activity::class.java))
+    }
+
+    fun runLecture05Activity(v: View){
+        startActivity(Intent(this, Lecture05Activity::class.java))
     }
 
 }
