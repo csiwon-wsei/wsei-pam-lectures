@@ -12,8 +12,8 @@ interface TaskDao {
     @Query("Select * from tasks where is_done = :done")
     suspend fun findAllDone(done: Boolean): Array<TaskEntity>
 
-    @Query("Select * from tasks where id = :id")
-    suspend fun findById(id: Int): TaskEntity?
+    @Query("Select * from tasks where id = :taskId")
+    suspend fun findById(taskId: Int): TaskEntity?
 
     @Query("Select * from tasks")
     suspend fun findAll(): Array<TaskEntity>
