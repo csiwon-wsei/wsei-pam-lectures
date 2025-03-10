@@ -3,43 +3,18 @@ package pl.wsei.pam.lectures.lecture7
 import android.os.Bundle
 import android.support.annotation.DrawableRes
 import android.support.annotation.StringRes
-import androidx.activity.ComponentActivity
+import androidx.activity.*
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.paddingFromBaseline
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.*
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.material.icons.*
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.*
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -49,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import pl.wsei.pam.lectures.R
 import pl.wsei.pam.lectures.lecture7.dagger.DaggerNamesService
 import pl.wsei.pam.lectures.lecture7.dagger.NamesService
-import pl.wsei.pam.lectures.lecture7.ui.theme.LecturesTheme
+import pl.wsei.pam.lectures.lecture7.ui.theme.LecturesTheme as LecturesTheme1
 
 
 class Lecture07Activity : ComponentActivity() {
@@ -62,7 +37,7 @@ class Lecture07Activity : ComponentActivity() {
             service.names().getName()
         }
         setContent {
-            LecturesTheme {
+            LecturesTheme1 {
                 Scaffold(
                     bottomBar = { BottomNavigation() }
                 ) {
@@ -142,7 +117,7 @@ class Lecture07Activity : ComponentActivity() {
             contentPadding = PaddingValues(horizontal = 16.dp),
             modifier = modifier
         ) {
-            items(items = names) { item ->
+            items(items = names){ item ->
                 AlignBodyElement(item)
             }
         }
@@ -201,7 +176,7 @@ class Lecture07Activity : ComponentActivity() {
     @Preview(showBackground = true, backgroundColor = 0xFFF5F0EE)
     @Composable
     fun FavoriteCollectionCardPreview() {
-        LecturesTheme {
+        LecturesTheme1 {
             CardItem(
                 text = R.string.place_holder,
                 drawable = R.drawable.wsei_logo_svg,
@@ -237,7 +212,7 @@ class Lecture07Activity : ComponentActivity() {
     @Preview(showBackground = true, backgroundColor = 0x115577)
     @Composable
     fun PreviewAlignBodyElement() {
-        LecturesTheme {
+        LecturesTheme1 {
             AlignBodyElement(
                 text = service.names().getName()
             )
@@ -273,7 +248,7 @@ class Lecture07Activity : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun Preview() {
-        LecturesTheme {
+        LecturesTheme1 {
             Surface {
                 Main()
             }

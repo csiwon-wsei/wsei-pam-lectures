@@ -2,15 +2,11 @@ package pl.wsei.pam.lectures.lecture2
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.ui.semantics.text
 import pl.wsei.pam.lectures.lecture1.lib.createLayout
 
 class ProgrammaticActivity : AppCompatActivity() {

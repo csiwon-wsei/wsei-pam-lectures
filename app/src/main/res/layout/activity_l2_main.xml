@@ -40,6 +40,7 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:onClick="runContactIntent"
         android:text="Contact Intent" />
 
     <Button
@@ -61,7 +62,7 @@
     <Button
         style="@style/AppButton"
         android:id="@+id/l2TableLayoutButton"
-        android:onClick="runTableLayoutActivity"
+        android:onClick="runFrameLayoutActivity"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

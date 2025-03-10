@@ -21,7 +21,6 @@ class L3GetImageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_l3_get_image)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.l1MainLayout)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -32,7 +31,7 @@ class L3GetImageActivity : AppCompatActivity() {
         mImageView = findViewById(R.id.l3ImageView)
 
         mGetImage =
-            registerForActivityResult<String, Uri>(
+            registerForActivityResult<String, Uri?>(
                 ActivityResultContracts.GetContent()
             ) {
                 result: Uri? ->

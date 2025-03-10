@@ -89,7 +89,7 @@
         <activity
             android:name=".lecture6.network.L6NetworkActivity"
             android:exported="false"
-            android:theme="@style/Theme.Lectures" />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".lecture6.permission.L6PermissionActivity"
             android:exported="false" />

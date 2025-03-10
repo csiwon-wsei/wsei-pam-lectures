@@ -26,7 +26,6 @@ class Lecture03Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_l3_main)
         mText = findViewById(R.id.l3inputText)
         mSeekBar = findViewById(R.id.l3seekBar)
