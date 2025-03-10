@@ -1,132 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/l3main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="32dp"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
     tools:context=".lecture3.Lecture03Activity">
 
     <EditText
         android:id="@+id/l3inputText"
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/l3Btn01"
-        app:layout_constraintEnd_toStartOf="@+id/l3seekBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread" />
-
-    <Button
-        android:id="@+id/l3Btn01"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="runExample1"
-        android:text="Run Activity passing params"
-        app:layout_constraintBottom_toTopOf="@+id/l3btn02"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/l3inputText"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <Button
-        android:id="@+id/l3btn02"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:onClick="runExample2"
-        android:text="Send SMS"
-        app:layout_constraintBottom_toTopOf="@+id/l3Btn04"
-        app:layout_constraintEnd_toStartOf="@+id/l3Btn03"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/l3Btn01" />
-
-    <Button
-        android:id="@+id/l3Btn03"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:onClick="runExample3"
-        android:text="Get Image"
-        app:layout_constraintBaseline_toBaselineOf="@+id/l3btn02"
-        app:layout_constraintEnd_toEndOf="@+id/l3Btn01"
-        app:layout_constraintStart_toEndOf="@+id/l3btn02" />
-
-    <Button
-        android:id="@+id/l3Btn04"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="runExample4"
-        android:text="Take Photo"
-        app:layout_constraintBottom_toTopOf="@+id/l3Btn05"
-        app:layout_constraintEnd_toEndOf="@+id/l3Btn03"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/l3btn02"
-        app:layout_constraintTop_toBottomOf="@+id/l3btn02" />
-
-    <Button
-        android:id="@+id/l3Btn05"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:height="128dp"
-        android:onClick="runExample5"
-        android:text="View Group"
-        app:layout_constraintBottom_toTopOf="@+id/l3Btn06"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/l3Btn04" />
-
-    <SeekBar
-        android:id="@+id/l3seekBar"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/l3inputText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/l3inputText"
-        app:layout_constraintTop_toTopOf="@+id/l3inputText" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/l3SeekBarLabel"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/l3seekBar"
-        app:layout_constraintTop_toBottomOf="@+id/l3seekBar" />
+        android:text="0" />
+
+    <SeekBar
+        android:id="@+id/l3seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp" />
+
+    <Button
+        android:id="@+id/l3Btn01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runExample1"
+        android:text="Run Activity passing params" />
+
+    <Button
+        android:id="@+id/l3Btn03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runExample3"
+        android:text="Get Image" />
+
+
+    <Button
+        android:id="@+id/l3Btn05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runExample5"
+        android:text="View Group" />
 
     <Button
         android:id="@+id/l3Btn06"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="runExample6"
-        android:text="RecyclerView"
-        app:layout_constraintBottom_toTopOf="@+id/l3Btn07"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/l3Btn05" />
+        android:text="RecyclerView" />
 
     <Button
         android:id="@+id/l3Btn07"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="runExample7"
-        android:text="Navigations"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/l3Btn06" />
+        android:text="Navigations" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

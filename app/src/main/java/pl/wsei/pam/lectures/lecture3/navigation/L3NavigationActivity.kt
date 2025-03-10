@@ -48,13 +48,10 @@ class L3NavigationActivity : AppCompatActivity() {
                     Toast.makeText(this, "No activity to send email!", Toast.LENGTH_SHORT).show()
                 }
             }
-
             R.id.l3MenuItemReturn -> {
                 finish()
             }
-
             else -> {
-
             }
         }
         return true

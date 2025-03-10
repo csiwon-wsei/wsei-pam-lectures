@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">@color/wsei_primary</color>
+    <color name="colorPrimaryDark">@color/wsei_primary</color>
+    <color name="colorSecondary">#464F5A</color>
+    <color name="colorTertiary">#F39200</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -12,4 +16,7 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
+    <color name="wsei_primary">#7FC241</color>
+    <color name="wsei_secondary">#464F5A</color>
+    <color name="wsei_tertiary">#F39200</color>
 </resources>

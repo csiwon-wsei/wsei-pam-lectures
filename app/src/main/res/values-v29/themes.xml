@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Lectures" parent="Theme.Material3.Light">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/wsei_primary</item>
+        <item name="colorPrimaryVariant">#507532</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/wsei_secondary</item>
+        <item name="colorSecondaryVariant">#2A2F36</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="colorTertiary">@color/wsei_tertiary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/wsei_tertiary</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

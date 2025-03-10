@@ -10,19 +10,19 @@ import androidx.room.Update
 interface TaskDao {
 
     @Query("Select * from tasks where is_done = :done")
-    suspend fun findAllDone(done: Boolean): Array<TaskEntity>
+     fun findAllDone(done: Boolean): Array<TaskEntity>
 
     @Query("Select * from tasks where id = :taskId")
-    suspend fun findById(taskId: Int): TaskEntity?
+     fun findById(taskId: Int): TaskEntity?
 
     @Query("Select * from tasks")
-    suspend fun findAll(): Array<TaskEntity>
+     fun findAll(): Array<TaskEntity>
 
     @Insert
-    suspend fun insert(vararg item: TaskEntity)
+     fun insert(vararg item: TaskEntity)
     @Delete
-    suspend fun delete(item: TaskEntity)
+     fun delete(item: TaskEntity)
 
     @Update
-    suspend fun update(item: TaskEntity)
+     fun update(item: TaskEntity)
 }

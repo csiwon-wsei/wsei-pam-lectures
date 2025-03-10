@@ -23,7 +23,7 @@ class L3GetImageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_l3_get_image)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.l4Example1Btn)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.l1MainLayout)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

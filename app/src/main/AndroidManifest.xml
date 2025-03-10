@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
 
     <queries>
         <intent>
@@ -19,13 +27,8 @@
         android:name="android.hardware.camera"
         android:required="true" />
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
-
     <application
+        android:name=".LecturesApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:enableOnBackInvokedCallback="true"
@@ -36,14 +39,70 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lectures"
         tools:targetApi="tiramisu">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity android:name=".lecture2.layouts.ConstraintLayoutActivity"
+            android:exported="false"
+            />
+        <activity android:name=".lecture2.layouts.TableLayoutActivity"
+            android:exported="false"
+            />
+        <activity android:name=".lecture2.layouts.FrameLayoutActivity"
+            android:exported="false"
+        />
+        <activity android:name=".lecture2.ProgrammaticActivity"
+            android:exported="false"
+            />
+        <activity android:name=".lecture2.layouts.LinearLayoutActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".lecture2.Lecture02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".lecture1.widgets.L01WidgetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lecture1.text.L01TextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lecture1.buttons.L01ButtonsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lecture1.Lecture01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".lecture7.Lecture07Activity"
+            android:exported="false"
+            android:label="@string/title_activity_l7_compose"
+            android:theme="@style/Theme.Lectures" />
+        <activity
+            android:name=".lecture6.workmanager.L6WorkManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lecture6.network.L6NetworkActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Lectures" />
+        <activity
+            android:name=".lecture6.permission.L6PermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lecture6.Lecture06Activity"
+            android:exported="false" />
         <activity
             android:name=".lecture5.Lecture05Activity"
             android:exported="false" />
         <activity
             android:name=".lecture4.lifecycle.L4LifeCycleActivity"
             android:exported="false"
-            android:label="@string/title_activity_l4_life_cycle"
-            android:theme="@style/Theme.Lectures.NoActionBar" />
+            android:label="@string/title_activity_l4_life_cycle" />
         <activity
             android:name=".lecture4.binding.L4BindingActivity"
             android:exported="false" />
@@ -82,10 +141,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

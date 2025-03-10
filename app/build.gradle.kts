@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("androidx.room")
     id("com.google.devtools.ksp")
+//  id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -13,16 +14,24 @@ android {
 
     defaultConfig {
         applicationId = "pl.wsei.pam.lectures"
-        minSdk = 26
+        minSdk = 29
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments["room.incremental"] = "true"
+            }
+        }
     }
     java {
         toolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
+            languageVersion.set(JavaLanguageVersion.of(8))
         }
     }
     kotlin {
@@ -38,21 +47,37 @@ android {
             )
         }
     }
+
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        compose = true
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
+    }
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
     room {
         schemaDirectory("$projectDir/schemas")
     }
 }
-
+// wersje i szczegóły znajdują się w pliku libs.versions.toml
 dependencies {
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -65,12 +90,57 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.preference)
-    //Room
+
+    //room
     implementation(libs.androidx.room.runtime)
+    implementation(libs.support.annotations)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
+
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
+    //retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.moshi)
+
+    //moshi
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    ksp(libs.moshi.kotlin.codegen)
+
+    //work manager
+    implementation(libs.androidx.work.runtime.ktx)
+
+    //glide
+    implementation(libs.glide)
+    ksp(libs.compiler)
+
+    //okhttp
+    implementation(libs.okhttp)
+
+    //hilt
+//    implementation(libs.hilt.android)
+//    ksp(libs.hilt.android.compiler)
+
+    //dagger
+    implementation(libs.dagger)
+    ksp(libs.dagger.compiler)
+    annotationProcessor(libs.dagger.compiler)
+    ksp(libs.dagger.android.processor)
+    annotationProcessor(libs.dagger.android.processor)
+
+    //test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
 }

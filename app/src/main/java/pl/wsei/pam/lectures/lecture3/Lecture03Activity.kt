@@ -40,7 +40,7 @@ class Lecture03Activity : AppCompatActivity() {
             insets
         }
         /**
-         * Ustawienie słucha dla zdarzenia zmiany położenia SekkeBar
+         * Ustawienie słuchacza dla zdarzenia zmiany położenia SeekBar
          * Słuchaczem jest anonimowy obiekt implementujący interfejs słuchacza
          */
         mSeekBar.setOnSeekBarChangeListener(object: OnSeekBarChangeListener{
@@ -80,16 +80,6 @@ class Lecture03Activity : AppCompatActivity() {
         intentP.putExtra("array", arr);
 
         startActivity(intentP)
-    }
-
-    /**
-     * Tworzenie intencji za akcją - uruchomienie aktywności służącej do wysyłania sms'a
-     * Stałe zawarte w klasie Intent określają akcje.
-     */
-    public fun runExample2(v: View) {
-        val intent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:12346556"))
-        intent.putExtra("sms_body", "Sending new message")
-        startActivity(intent)
     }
 
     /**

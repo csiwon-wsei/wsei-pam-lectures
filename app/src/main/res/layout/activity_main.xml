@@ -1,50 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/l4Example1Btn"
+    android:id="@+id/l1MainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="32dp"
     android:onClick="runLecture04Activity"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/AppButton"
+        android:id="@+id/mainButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:theme="@style/Theme.Lectures"
+        android:onClick="runLecture01Activity"
+        android:text="Wykład 1" />
+
+
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/mainButton2"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runLecture02Activity"
+        android:text="Wykład 2" />
+
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/mainButton3"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="runLecture03Activity"
-        android:text="@string/lecture03BtnRunActivity"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintVertical_chainStyle="spread" />
+        android:text="@string/lecture03BtnRunActivity" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/AppButton"
+        android:id="@+id/mainButton4"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="runLecture04Activity"
-        android:text="@string/lecture04BtnRunActivity"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.5" />
+        android:text="@string/lecture04BtnRunActivity" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        style="@style/AppButton"
+        android:id="@+id/mainButton5"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="runLecture05Activity"
-        android:text="Wykład 5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.5" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Wykład 5" />
+
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/mainButton6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runLecture06Activity"
+        android:layout_weight="1"
+        android:text="Wykład 6" />
+
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/mainButton7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runLecture07Activity"
+        android:layout_weight="1"
+        android:text="Wykład 7" />
+
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/mainButton8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runLecture06Activity"
+        android:layout_weight="1"
+        android:text="Wykład 8" />
+
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/mainButton9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runLecture06Activity"
+        android:layout_weight="1"
+        android:text="Wykład 9" />
+
+
+</LinearLayout>

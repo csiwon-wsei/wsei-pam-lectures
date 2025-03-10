@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/l2main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context=".lecture2.Lecture02Activity">
+
+    <Button
+        android:id="@+id/l2SmsButton"
+        style="@style/AppButton"
+        android:onClick="runSMSIntent"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="SMS Intent" />
+
+    <ImageView
+        android:id="@+id/l2PhotoImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/l2PhotoButton"
+        style="@style/AppButton"
+        android:layout_weight="1"
+        android:onClick="runPhotoIntent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Photo Intent" />
+
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/l2ContactButton"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Contact Intent" />
+
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/l2ActivityButton"
+        android:onClick="runProgrammingActivityWithParameters"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Activity with params" />
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/l2LinearLayoutButton"
+        android:onClick="runLinearLayoutActivity"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="LinearLayout" />
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/l2TableLayoutButton"
+        android:onClick="runTableLayoutActivity"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="FrameLayout" />
+
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/l2FrameLayoutButton"
+        android:onClick="runTableLayoutActivity"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="TableLayout" />
+    <Button
+        style="@style/AppButton"
+        android:id="@+id/l2ConstraintLayoutButton"
+        android:onClick="runConstraintLayoutActivity"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ConstraintLayout" />
+</LinearLayout>
